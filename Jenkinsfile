@@ -5,13 +5,13 @@ stages {
 
     stage('Build Docker Image') {
         steps {
-            bat 'docker build -t YOUR_DOCKERHUB_USERNAME/docker-automation-app:latest .'
+            bat 'docker build -t bhu27/docker-automation-app:latest .'
         }
     }
 
     stage('Trivy Scan') {
         steps {
-            bat '"C:\\Users\\BHUMIKA.G\\AppData\\Local\\Microsoft\\WinGet\\Links\\trivy.exe" image YOUR_DOCKERHUB_USERNAME/docker-automation-app:latest'
+            bat '"C:\\Users\\BHUMIKA.G\\AppData\\Local\\Microsoft\\WinGet\\Links\\trivy.exe" image bhu27/docker-automation-app:latest'
         }
     }
 
